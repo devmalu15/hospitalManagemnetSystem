@@ -1,0 +1,9 @@
+<h1>Edit user</h1>
+<form action="/users/<%= user._id %>?_method=PUT" method="POST">
+  <input type="text" value="<%= user.userName %>" disabled>
+  <input type="text" name="address" value="<%= user.address %>" required>
+  <input type="text" name="country" value="<%= user.country %>" required>
+  <input type="number" name="age" value="<%= user.age %>" required>
+  <button type="submit">Update</button>
+</form>
+<a href="/users">Back</a>

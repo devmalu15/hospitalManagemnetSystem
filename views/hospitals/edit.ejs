@@ -1,0 +1,10 @@
+<h1>Edit hospital</h1>
+<form action="/hospitals/<%= hospital._id %>?_method=PUT" method="POST">
+  <input type="text" value="<%= hospital.hospitalName %>" disabled>
+  <input type="text" name="city" value="<%= hospital.city %>" required>
+  <input type="text" name="country" value="<%= hospital.country %>" required>
+  <input type="number" name="numberOfTerminals" value="<%= hospital.numberOfTerminals %>" required>
+  <input type="number" name="runawayLength" value="<%= hospital.runawayLength %>" required>
+  <button type="submit">Update</button>
+</form>
+<a href="/hospitals">Back</a>

@@ -1,0 +1,13 @@
+<h1>All hospitals</h1>
+<a href="/hospitals/new">Add New hospital</a>
+<ul>
+  <% hospitals.forEach(hospital => { %>
+  <li>
+    <a href="/hospitals/<%= hospital._id %>"><%= hospital.hospitalName %></a>
+    <a href="/hospitals/<%= hospital._id %>/edit">Edit</a>
+    <form action="/hospitals/<%= hospital._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+  </li>
+  <% }) %>
+</ul>

@@ -1,0 +1,13 @@
+<h1>All users</h1>
+<a href="/users/new">Add New user</a>
+<ul>
+  <% users.forEach(user => { %>
+  <li>
+    <a href="/users/<%= user._id %>"><%= user.userName %></a>
+    <a href="/users/<%= user._id %>/edit">Edit</a>
+    <form action="/users/<%= user._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete</button>
+    </form>
+  </li>
+  <% }) %>
+</ul>
